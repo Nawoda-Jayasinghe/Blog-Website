@@ -1,0 +1,19 @@
+<%- include("./partials/header") -%>
+
+<h1>Home</h1>
+<p><%=homeStartingContent%></p>
+<p><%=textArray%></p>
+
+<!-- <%for (let i=0; i< textArray.length ; i++){%>
+    <% console.log(textArray[i]); %>
+<%}%> -->
+
+<%textArray.forEach(function(textArr){%>
+    <!-- <%console.log(textArr.text1);%> -->
+    <h1> <%= textArr.text1 %></h1>
+    <p> <%= textArr.text2.substring(0, 100)+"..." %>
+    <a href="/textArray/<%=textArr.text1%>">Read More</a></p>
+
+<%})%>
+
+<%- include("./partials/footer") -%>
